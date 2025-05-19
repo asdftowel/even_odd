@@ -13,26 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: ls
+      run: ls -l
     - name: make
       run: make
     - name: make check
       run: make check
-
-  build-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - uses: msys2/setup-msys2@v2
-      with:
-        msystem: UCRT64
-        update: true
-        install: >-
-          git
-          mingw-w64-ucrt-x86_64-gcc
-          mingw-w64-ucrt-x86_64-make
-    - shell: msys2 {0}
-      run: |
-        make
-        make check
