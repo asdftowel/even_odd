@@ -1,3 +1,5 @@
+[![C/C++ CI](https://github.com/asdftowel/even_odd/actions/workflows/c-cpp.yml/badge.svg?branch=master)](https://github.com/asdftowel/even_odd/actions/workflows/c-cpp.yml)
+
 # even_odd
 A program that says whether its argument is a number
 and if it is even or odd.
