@@ -16,7 +16,7 @@ $(NAME): $(SRCDIR)/even_odd.c
 	$(CC) $(CFLAGS) $(WFLAGS) -o $@ $<
 
 check: $(SRCDIR)/test_eo.sh
-	prefix='./' name=$(NAME) $<
+	prefix='./' name=$(NAME) sh $<
 
 clean:
 	rm $(NAME)
